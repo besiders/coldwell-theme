@@ -668,7 +668,7 @@ $(document).ready(function() {
             }
         });
 
-
+alert('test');
       var urlCall  = 'https://www.coldwellbankercostarica.com/api/';
         $.ajax({
 
