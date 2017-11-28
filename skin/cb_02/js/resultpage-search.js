@@ -655,6 +655,18 @@ $(document).ready(function() {
   } 
   function apiCall(addParams,fromwhere){
 
+      $( "#slider-range" ).slider({
+            range: true,
+            min: 1,
+            max: 70000000,
+            values: [ getQueryStringValue("minPrice"), getQueryStringValue("maxPrice") ],
+            slide: function( event, ui ) {
+              //$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+              /*for (var i = 0; i < ui.values.length; ++i) {
+                      $("input.sliderValue[data-index=" + i + "]").val('$'+ui.values[i]);
+                }*/
+            }
+        });
 
 
       var urlCall  = 'https://www.coldwellbankercostarica.com/api/';
